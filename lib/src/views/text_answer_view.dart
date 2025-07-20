@@ -39,12 +39,18 @@ class _TextAnswerViewState extends State<TextAnswerView> {
 
   void _checkValidation(String text) {
     setState(() {
+      bool valid = true;
+
       if (_textAnswerFormat.validationRegEx != null) {
         RegExp regExp = new RegExp(_textAnswerFormat.validationRegEx!);
-        _isValid = regExp.hasMatch(text);
-      } else {
-        _isValid = true;
+        valid = valid && regExp.hasMatch(text);
       }
+
+      if (_textAnswerFormat.minCharacters != null) {
+        valid = valid && text.length >= _textAnswerFormat.minCharacters!;
+      }
+
+      _isValid = valid;
     });
   }
 
