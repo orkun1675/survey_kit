@@ -38,6 +38,13 @@ class _TextAnswerViewState extends State<TextAnswerView> {
   }
 
   void _checkValidation(String text) {
+    if (widget.questionStep.isOptional && text.trim().isEmpty) {
+      setState(() {
+        _isValid = true;
+      });
+      return;
+    }
+
     setState(() {
       bool valid = true;
 
@@ -78,7 +85,7 @@ class _TextAnswerViewState extends State<TextAnswerView> {
               textAlign: TextAlign.center,
             )
           : widget.questionStep.content,
-      isValid: _isValid || widget.questionStep.isOptional,
+      isValid: _isValid,
       child: Column(
         children: [
           Padding(
