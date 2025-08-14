@@ -46,7 +46,7 @@ class StepView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 32.0),
                   child: OutlinedButton(
-                    onPressed: isValid || step.isOptional
+                    onPressed: isValid
                         ? () => [
                               FocusScope.of(context).hasFocus
                                   ? FocusScope.of(context).unfocus()
