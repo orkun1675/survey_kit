@@ -18,8 +18,9 @@ class SurveyResult extends Result {
     required this.finishReason,
     required this.results,
   }) : super(id: id, startDate: startDate, endDate: endDate);
-  
-  factory SurveyResult.fromJson(Map<String, dynamic> json) => _$SurveyResultFromJson(json);
+
+  factory SurveyResult.fromJson(Map<String, dynamic> json) =>
+      _$SurveyResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$SurveyResultToJson(this);
 

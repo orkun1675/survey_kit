@@ -38,7 +38,6 @@ class VideoResult {
 
   Map<String, dynamic> toJson() => _$VideoResultToJson(this);
 
-
   const VideoResult({
     required this.leftVideoAt,
     required this.stayedInVideo,

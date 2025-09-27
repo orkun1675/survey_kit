@@ -22,7 +22,8 @@ class SingleChoiceQuestionResult extends QuestionResult<TextChoice?> {
           result: result,
         );
 
-  factory SingleChoiceQuestionResult.fromJson(Map<String, dynamic> json) => _$SingleChoiceQuestionResultFromJson(json);
+  factory SingleChoiceQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$SingleChoiceQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$SingleChoiceQuestionResultToJson(this);
 

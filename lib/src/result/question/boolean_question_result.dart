@@ -22,7 +22,8 @@ class BooleanQuestionResult extends QuestionResult<BooleanResult?> {
           result: result,
         );
 
-  factory BooleanQuestionResult.fromJson(Map<String, dynamic> json) => _$BooleanQuestionResultFromJson(json);
+  factory BooleanQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$BooleanQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$BooleanQuestionResultToJson(this);
 

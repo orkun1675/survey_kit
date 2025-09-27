@@ -21,7 +21,8 @@ class DateQuestionResult extends QuestionResult<DateTime?> {
           result: result,
         );
 
-  factory DateQuestionResult.fromJson(Map<String, dynamic> json) => _$DateQuestionResultFromJson(json);
+  factory DateQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$DateQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$DateQuestionResultToJson(this);
 

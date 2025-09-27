@@ -5,7 +5,7 @@ import 'package:survey_kit/survey_kit.dart';
 
 void main() {
   test('identifier created by json is the same as created by code', () {
-    final jsonStr = ''' 
+    final jsonStr = '''
       {
         "id":"123"
       }

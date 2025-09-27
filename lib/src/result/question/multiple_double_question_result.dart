@@ -22,7 +22,8 @@ class MultipleDoubleQuestionResult extends QuestionResult<List<MultiDouble>?> {
           result: result,
         );
 
-  factory MultipleDoubleQuestionResult.fromJson(Map<String, dynamic> json) => _$MultipleDoubleQuestionResultFromJson(json);
+  factory MultipleDoubleQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$MultipleDoubleQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$MultipleDoubleQuestionResultToJson(this);
 

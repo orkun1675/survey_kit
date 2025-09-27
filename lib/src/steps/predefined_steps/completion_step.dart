@@ -13,15 +13,15 @@ class CompletionStep extends Step {
   final String text;
   final String assetPath;
 
-  CompletionStep({
-    bool isOptional = false,
-    required StepIdentifier stepIdentifier,
-    String buttonText = 'End Survey',
-    bool showAppBar = true,
-    required this.title,
-    required this.text,
-    this.assetPath = ""
-  }) : super(
+  CompletionStep(
+      {bool isOptional = false,
+      required StepIdentifier stepIdentifier,
+      String buttonText = 'End Survey',
+      bool showAppBar = true,
+      required this.title,
+      required this.text,
+      this.assetPath = ""})
+      : super(
           stepIdentifier: stepIdentifier,
           isOptional: isOptional,
           buttonText: buttonText,

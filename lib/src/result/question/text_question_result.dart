@@ -21,7 +21,8 @@ class TextQuestionResult extends QuestionResult<String?> {
           result: result,
         );
 
-  factory TextQuestionResult.fromJson(Map<String, dynamic> json) => _$TextQuestionResultFromJson(json);
+  factory TextQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$TextQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$TextQuestionResultToJson(this);
 

@@ -13,7 +13,7 @@ void main() {
   group('serialisation', () {
     test(
       'should work with valid example',
-          () async {
+      () async {
         final encodedResult = tResult.toJson();
         final decodedResult = DoubleQuestionResult.fromJson(encodedResult);
         expect(tResult, decodedResult);

@@ -14,12 +14,12 @@ class MultipleChoiceAnswerFormat implements AnswerFormat {
   @JsonKey(defaultValue: 100)
   final int maxAnswers;
 
-  const MultipleChoiceAnswerFormat({
-    required this.textChoices,
-    this.defaultSelection = const [],
-    this.otherField = false,
-    this.maxAnswers = 100
-  }) : super();
+  const MultipleChoiceAnswerFormat(
+      {required this.textChoices,
+      this.defaultSelection = const [],
+      this.otherField = false,
+      this.maxAnswers = 100})
+      : super();
 
   factory MultipleChoiceAnswerFormat.fromJson(Map<String, dynamic> json) =>
       _$MultipleChoiceAnswerFormatFromJson(json);

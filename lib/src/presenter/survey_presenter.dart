@@ -22,39 +22,31 @@ class SurveyPresenter extends Bloc<SurveyEvent, SurveyState> {
     required this.taskNavigator,
     required this.onResult,
   }) : super(LoadingSurveyState()) {
-
-    on<StartSurvey>((event, emit){
-      emit(
-        _handleInitialStep()
-      );
+    on<StartSurvey>((event, emit) {
+      emit(_handleInitialStep());
     });
 
-    on<NextStep>((event, emit){
-      if (state is PresentingSurveyState){
+    on<NextStep>((event, emit) {
+      if (state is PresentingSurveyState) {
         emit(_handleNextStep(event, state as PresentingSurveyState));
       }
     });
 
-    on<StepBack>((event, emit){
-      if (state is PresentingSurveyState){
-        emit(
-          _handleStepBack(event, state as PresentingSurveyState)
-        );
+    on<StepBack>((event, emit) {
+      if (state is PresentingSurveyState) {
+        emit(_handleStepBack(event, state as PresentingSurveyState));
       }
     });
 
-    on<CloseSurvey>((event, emit){
-      if (state is PresentingSurveyState){
-        emit(
-          _handleClose(event, state as PresentingSurveyState)
-        );
+    on<CloseSurvey>((event, emit) {
+      if (state is PresentingSurveyState) {
+        emit(_handleClose(event, state as PresentingSurveyState));
       }
     });
 
     this.startDate = DateTime.now();
     add(StartSurvey());
   }
-
 
   SurveyState _handleInitialStep() {
     Step? step = taskNavigator.firstStep();

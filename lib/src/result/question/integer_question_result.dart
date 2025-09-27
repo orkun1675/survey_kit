@@ -21,7 +21,8 @@ class IntegerQuestionResult extends QuestionResult<int?> {
           result: result,
         );
 
-  factory IntegerQuestionResult.fromJson(Map<String, dynamic> json) => _$IntegerQuestionResultFromJson(json);
+  factory IntegerQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$IntegerQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$IntegerQuestionResultToJson(this);
 

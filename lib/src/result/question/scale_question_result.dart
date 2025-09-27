@@ -21,7 +21,8 @@ class ScaleQuestionResult extends QuestionResult<double?> {
           result: result,
         );
 
-  factory ScaleQuestionResult.fromJson(Map<String, dynamic> json) => _$ScaleQuestionResultFromJson(json);
+  factory ScaleQuestionResult.fromJson(Map<String, dynamic> json) =>
+      _$ScaleQuestionResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$ScaleQuestionResultToJson(this);
 

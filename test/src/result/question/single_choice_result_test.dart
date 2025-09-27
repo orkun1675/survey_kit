@@ -15,7 +15,8 @@ void main() {
       'should work with valid example',
       () async {
         final encodedResult = tResult.toJson();
-        final decodedResult = SingleChoiceQuestionResult.fromJson(encodedResult);
+        final decodedResult =
+            SingleChoiceQuestionResult.fromJson(encodedResult);
         expect(tResult, decodedResult);
       },
     );
